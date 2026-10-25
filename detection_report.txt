@@ -1,0 +1,32 @@
+AI OBJECT DETECTION PRACTICAL REPORT
+
+Project: AI Object Detection System
+Model: YOLO11n
+Target object: Person
+
+TRAINING
+- Training completed successfully.
+- Model weights saved as best.pt and last.pt.
+- Training used 3 training images and 1 validation image.
+
+DETECTION TEST 1
+- Image: IMG_20260419_173858_181.jpg
+- Object detected: 1 person
+- Confidence: 86.88%
+
+DETECTION TEST 2
+- Image: IMG_20260911_122545_411.jpg
+- Object detected: 1 person
+
+CONFIDENCE THRESHOLD TEST
+- 25% threshold: 1 detection
+- 50% threshold: 1 detection
+- 80% threshold: 1 detection
+
+CONCLUSION
+The trained YOLO model successfully detected people in two images.
+The detection images were saved for practical evidence.
+
+NOTE
+The dataset is very small. More labelled images and testing are
+needed to evaluate how well the model generalizes to new images.
