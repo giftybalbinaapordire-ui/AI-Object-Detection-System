@@ -218,3 +218,17 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+# Personal image dataset
+dataset/raw_images/
+dataset/annotated_images/
+dataset/images/
+dataset/labels/
+
+# YOLO model weights and training outputs
+*.pt
+runs/
+
+# Generated image previews and predictions
+practical_results/*.jpg
+practical_results/*.jpeg
+practical_results/*.png
