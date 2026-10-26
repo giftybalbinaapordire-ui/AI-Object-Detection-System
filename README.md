@@ -27,3 +27,32 @@ The project includes image preparation, object annotation, model training, and t
 
 ## Learning Outcome
 This project provides practical experience in computer vision, image annotation, machine learning, and object detection.
+## Latest YOLO11n Practical Results
+
+### Training Configuration
+- Model: YOLO11n
+- Target class: Person
+- Training images: 4
+- Validation images: 1
+- Epochs: 10
+- Image size: 640
+- Batch size: 2
+
+### Detection Tests
+| Test Image | Detections | Confidence |
+|---|---:|---:|
+| IMG_20260419_173858_181.jpg | 1 person | 89.6% |
+| IMG_20260911_122545_411.jpg | 1 person | 91.8% |
+
+Both detection results were visually checked, and the bounding boxes correctly surrounded the detected people.
+
+### Validation Metrics
+- Precision: 97.3%
+- Recall: 100%
+- mAP50: 99.5%
+- mAP50-95: 89.5%
+
+**Limitation:** These metrics are based on only one validation image containing one labelled person. A larger labelled dataset and validation set are needed to evaluate performance on unseen images.
+
+### Results and Model Files
+Training weights and annotated detection results are saved locally. Personal photographs and model-weight files are not included in this public repository.
