@@ -2,31 +2,45 @@ AI OBJECT DETECTION PRACTICAL REPORT
 
 Project: AI Object Detection System
 Model: YOLO11n
-Target object: Person
+Target Object: Person
 
-TRAINING
+1. TRAINING
 - Training completed successfully.
 - Model weights saved as best.pt and last.pt.
-- Training used 3 training images and 1 validation image.
+- Training used 4 training images and 1 validation image.
+- Training duration: 10 epochs.
+- Image size: 640 pixels.
+- Batch size: 2.
+- New training results saved in runs/person_training_v2.
 
-DETECTION TEST 1
+2. VALIDATION RESULTS
+- Precision: 97.3%
+- Recall: 100%
+- mAP50: 99.5%
+- mAP50-95: 89.5%
+
+Limitation: These metrics are based on only one validation image
+containing one labelled person and do not establish general performance.
+
+3. DETECTION TEST 1
 - Image: IMG_20260419_173858_181.jpg
-- Object detected: 1 person
-- Confidence: 86.88%
+- Objects detected: 1 person
+- Confidence: 89.6%
+- Visual bounding-box check: Successful
+- Results saved in practical_results_v2/test1.
 
-DETECTION TEST 2
+4. DETECTION TEST 2
 - Image: IMG_20260911_122545_411.jpg
-- Object detected: 1 person
+- Objects detected: 1 person
+- Confidence: 91.8%
+- Visual bounding-box check: Successful
+- Results saved in practical_results_v2/test2.
 
-CONFIDENCE THRESHOLD TEST
-- 25% threshold: 1 detection
-- 50% threshold: 1 detection
-- 80% threshold: 1 detection
+5. CONCLUSION
+The YOLO11n model completed training and detected one person
+in each of the two test images. The bounding boxes were visually
+checked and correctly surrounded the detected people.
 
-CONCLUSION
-The trained YOLO model successfully detected people in two images.
-The detection images were saved for practical evidence.
-
-NOTE
-The dataset is very small. More labelled images and testing are
-needed to evaluate how well the model generalizes to new images.
+The dataset remains small. More labelled images and a larger
+validation set are needed to evaluate how well the model generalises
+to unseen images.
