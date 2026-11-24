@@ -3,26 +3,35 @@
 __pycache__/
 *.py[cod]
 *.log
+*.so
 
-# Virtual environments and private settings
+# Virtual environments
 .venv/
 venv/
+env/
+
+# Private settings and API keys
 .env
 .env.*
 !.env.example
+
+# Python packaging
+build/
+dist/
+*.egg-info/
 
 # Training datasets and results
 dataset/
 runs/
 weights/
 practical_results/
+practical_results_v2/
+*.ndjson
 
-# Uploaded and generated website images
+# Website uploads and generated results
 web_app/static/uploads/*
 web_app/static/results/*
 
-# Keep the folders in Git
+# Keep required folders
 !web_app/static/uploads/.gitkeep
 !web_app/static/results/.gitkeep
-*.ndjson
-practical_results_v2/

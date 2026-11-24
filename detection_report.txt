@@ -1,0 +1,46 @@
+AI OBJECT DETECTION PRACTICAL REPORT
+
+Project: AI Object Detection System
+Model: YOLO11n
+Target Object: Person
+
+1. TRAINING
+- Training completed successfully.
+- Model weights saved as best.pt and last.pt.
+- Training used 4 training images and 1 validation image.
+- Training duration: 10 epochs.
+- Image size: 640 pixels.
+- Batch size: 2.
+- New training results saved in runs/person_training_v2.
+
+2. VALIDATION RESULTS
+- Precision: 97.3%
+- Recall: 100%
+- mAP50: 99.5%
+- mAP50-95: 89.5%
+
+Limitation: These metrics are based on only one validation image
+containing one labelled person and do not establish general performance.
+
+3. DETECTION TEST 1
+- Image: IMG_20260419_173858_181.jpg
+- Objects detected: 1 person
+- Confidence: 89.6%
+- Visual bounding-box check: Successful
+- Results saved in practical_results_v2/test1.
+
+4. DETECTION TEST 2
+- Image: IMG_20260911_122545_411.jpg
+- Objects detected: 1 person
+- Confidence: 91.8%
+- Visual bounding-box check: Successful
+- Results saved in practical_results_v2/test2.
+
+5. CONCLUSION
+The YOLO11n model completed training and detected one person
+in each of the two test images. The bounding boxes were visually
+checked and correctly surrounded the detected people.
+
+The dataset remains small. More labelled images and a larger
+validation set are needed to evaluate how well the model generalises
+to unseen images.

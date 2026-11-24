@@ -1,4 +1,5 @@
-﻿ultralytics
+﻿
+ultralytics
 opencv-python
 matplotlib
 numpy
