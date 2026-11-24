@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Person Detection System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Person Detection System</h1>
+            <p>Upload an image to detect people using a trained YOLO model.</p>
+        </header>
+
+        <main>
+            <section class="upload-card">
+                <h2>Upload an Image</h2>
+                <form method="POST" enctype="multipart/form-data">
+                    <input type="file" name="image" accept=".jpg,.jpeg,.png,.webp" required>
+                    <button type="submit">Detect People</button>
+                </form>
+
+                {% if error %}
+                    <p class="error">{{ error }}</p>
+                {% endif %}
+            </section>
+
+            {% if result_image %}
+            <section class="result-card">
+                <h2>Detection Results</h2>
+                <p class="count">People detected: <strong>{{ people_count }}</strong></p>
+                <img class="result-image"
+                     src="{{ url_for('static', filename=result_image) }}"
+                     alt="Image showing detection results">
+
+                {% if detections %}
+                    <h3>Detection Confidence</h3>
+                    <ul>
+                        {% for item in detections %}
+                            <li>Person {{ loop.index }}: {{ item.confidence }}%</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </section>
+            {% endif %}
+        </main>
+
+        <footer>
+            <p>AI Object Detection Project | YOLO Model</p>
+        </footer>
+    </div>
+</body>
+</html>

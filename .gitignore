@@ -1,0 +1,28 @@
+
+# Python temporary files
+__pycache__/
+*.py[cod]
+*.log
+
+# Virtual environments and private settings
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+
+# Training datasets and results
+dataset/
+runs/
+weights/
+practical_results/
+
+# Uploaded and generated website images
+web_app/static/uploads/*
+web_app/static/results/*
+
+# Keep the folders in Git
+!web_app/static/uploads/.gitkeep
+!web_app/static/results/.gitkeep
+*.ndjson
+practical_results_v2/
