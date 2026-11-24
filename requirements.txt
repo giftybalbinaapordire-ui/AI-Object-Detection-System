@@ -1,11 +1,10 @@
 ﻿
 ultralytics
-opencv-python
-matplotlib
+opencv-python-headless
 numpy
-pandas
-scikit-learn
-jupyter
 Pillow
 flask
 gunicorn
+
+
+
